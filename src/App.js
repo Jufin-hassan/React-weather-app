@@ -12,18 +12,6 @@ function App() {
   const [query, setQuery] = useState("");
   const [weather,setWeather] = useState("")
 
-  // const search = evt => {
-  //   if(evt.key==="Enter"){
-  //     fetch(`${api.base}weather?=${query}units=metric&appid=${api.key}`)
-  //     .then(res => res.json)
-  //     .then(result => {
-  //       setWeather(result)
-  //       setQuery('')
-  //       console.log(result);
-
-  //     })
-  //   }
-  // }
 
   const search =async evt => {
     if(evt.key==="Enter"){
@@ -50,7 +38,7 @@ function App() {
       <h3 className="date">{today.toDateString()}</h3>
       <div className="weather-box">
         <div className="temp">
-            {weather === '' ? '' : Math.round(`${weather.data.main.temp}° C`)}
+            {weather === '' ? '0' : Math.round(weather.data.main.temp)}° C
         </div>
         
       </div>
