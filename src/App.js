@@ -50,7 +50,7 @@ function App() {
       <h3 className="date">{today.toDateString()}</h3>
       <div className="weather-box">
         <div className="temp">
-            {weather === '' ? 'Hot' : Math.round(weather.data.main.temp)}° C
+            {weather === '' ? '' : Math.round(`${weather.data.main.temp}° C`)}
         </div>
         
       </div>
